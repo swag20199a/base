@@ -555,7 +555,7 @@ Link Para Download ${anu.result}*`
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.result}.mp4`, quoted: mek})
 					
 					break
-				case 'cpfx':
+				case 'cx':
 					if (args.length < 1) return reply('Cade O Cpf? ')
 					anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
@@ -564,7 +564,7 @@ Link Para Download ${anu.result}*`
 CPF: ${anu.cpf}
 NOME:  ${anu.nome}
 SEXO: ${anu.sexo}
-NASCIMENTO: ${anu.nascimento}*
+NASCIMENTO: ${anu.nascimento}
 BY: SWAGCHKS`
 break
                 case 'text3d':
@@ -574,9 +574,13 @@ break
                     buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
                     client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
 			     	break
-                case 'shorturl':
+                case 'cpfx':
+                    if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${body.slice(10)}`)
-			        hasil = `${anu.nome}`
+			        hasil = `CPF: ${anu.cpf}
+NOME:  ${anu.nome}
+SEXO: ${anu.sexo}
+NASCIMENTO: ${anu.nascimento}`
 			        reply(hasil)
 			        break
 			    case 'fototiktok':
