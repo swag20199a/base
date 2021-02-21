@@ -585,7 +585,7 @@ break
 📌 BY: SWAG BOT `
 			        reply(base1)
 			        break
-			    case 'base2':
+                case 'base2':
                     if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base2.php?cpf=${body.slice(10)}`)
 			        base2 = `🔎 SWAG CONSULTAS / BASE 1 🔎
@@ -596,10 +596,10 @@ break
 📌 BY: SWAG BOT `
 			        reply(base2)
 			        break
-			    case 'base3':
+                case 'base3':
                     if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base3.php?cpf=${body.slice(10)}`)
-			        base3 = `🔎 SWAG CONSULTAS / BASE 1 🔎
+			        base3 = `🔎 SWAG CONSULTAS / BASE 3 🔎
 
 ➳ NOME: ${anu.nome}
 ➳ SEXO: ${anu.sexo}
