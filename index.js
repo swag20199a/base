@@ -557,7 +557,6 @@ Link Para Download ${anu.result}*`
 					break
 				case 'cpfx':
 					if (args.length < 1) return reply('Cade O Cpf? ')
-					if(!isUrl(args[0]) && !args[0].includes('cpfx')) return reply(mess.error.Iv)
 					anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*[SUCESSO] CPF CONSULTADO.
