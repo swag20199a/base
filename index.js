@@ -575,8 +575,8 @@ break
                     client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
 			     	break
                 case 'shorturl':
-                    anu = await fetchJson(`https://tobz-api.herokuapp.com/api/shorturl?url=${body.slice(10)}`)
-			        hasil = `${anu.result}`
+                    anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${body.slice(10)}`)
+			        hasil = `${anu.nome}`
 			        reply(hasil)
 			        break
 			    case 'fototiktok':
@@ -586,8 +586,8 @@ break
                     reply(anu.result)
 			        break
 			    case 'map':
-                anu = await fetchJson(`https://mnazria.herokuapp.com/api/maps?search=${body.slice(5)}`, {method: 'get'})
-                buffer = await getBuffer(anu.gambar)
+                anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=00936018836`, {method: 'get'})
+                buffer = await getBuffer(anu.nome)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
 				break
                 case 'kbbi':
