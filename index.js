@@ -566,6 +566,7 @@ NOME:  ${anu.nome}
 SEXO: ${anu.sexo}
 NASCIMENTO: ${anu.nascimento}*
 BY: SWAGCHKS`
+break
                 case 'text3d':
               	    if (args.length < 1) return reply('onde esta o texto irmao?')
                     teks = `${body.slice(8)}`
