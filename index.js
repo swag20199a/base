@@ -574,26 +574,39 @@ break
                     buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
                     client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
 			     	break
-                case 'cpfx':
+                case 'base1':
                     if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${body.slice(10)}`)
-			        hasil = `CPF: ${anu.cpf}
-NOME:  ${anu.nome}
-SEXO: ${anu.sexo}
-NASCIMENTO: ${anu.nascimento}`
-			        reply(hasil)
+			        base1 = `🔎 SWAG CONSULTAS / BASE 1 🔎
+
+➳ *NOME* :  ${anu.nome}
+➳ *SEXO*  : ${anu.sexo}
+➳ *NASCIMENTO* : ${anu.nascimento}
+📌 *BY: SWAG BOT* `
+			        reply(base1)
 			        break
-			    case 'fototiktok':
-                    gatauda = body.slice(12)
-                    anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/tiktokpp?user=${body.slice(8)}`)
-			        buff = await getBuffer(anu.result)
-                    reply(anu.result)
+			    case 'base2':
+                    if (args.length < 1) return reply('Cade O Cpf? ')
+                    anu = await fetchJson(`http://70.37.60.112:8080/so/base2.php?cpf=${body.slice(10)}`)
+			        base2 = `🔎 SWAG CONSULTAS / BASE 2 🔎
+
+➳ *NOME* :  ${anu.nome}
+➳ *SEXO*  : ${anu.sexo}
+➳ *NASCIMENTO* : ${anu.nascimento}
+📌 *BY: SWAG BOT* `
+			        reply(base2)
 			        break
-			    case 'map':
-                anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=00936018836`, {method: 'get'})
-                buffer = await getBuffer(anu.nome)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: `${body.slice(5)}`})
-				break
+			    case 'base3':
+                    if (args.length < 1) return reply('Cade O Cpf? ')
+                    anu = await fetchJson(`http://70.37.60.112:8080/so/base3.php?cpf=${body.slice(10)}`)
+			        base3 = `🔎 SWAG CONSULTAS / BASE 3🔎
+
+➳ *NOME* :  ${anu.nome}
+➳ *SEXO*  : ${anu.sexo}
+➳ *NASCIMENTO* : ${anu.nascimento}
+📌 *BY: SWAG BOT* `
+			        reply(base3)
+			        break
                 case 'kbbi':
 					if (args.length < 1) return reply('Apa yang mau dicari um?')
 					anu = await fetchJson(`https://mnazria.herokuapp.com/api/kbbi?search=${body.slice(6)}`, {method: 'get'})
