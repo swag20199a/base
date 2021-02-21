@@ -579,32 +579,32 @@ break
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base1.php?cpf=${body.slice(10)}`)
 			        base1 = `🔎 SWAG CONSULTAS / BASE 1 🔎
 
-➳ *NOME* :  ${anu.nome}
-➳ *SEXO*  : ${anu.sexo}
-➳ *NASCIMENTO* : ${anu.nascimento}
-📌 *BY: SWAG BOT* `
+➳ NOME: ${anu.nome}
+➳ SEXO: ${anu.sexo}
+➳ NASCIMENTO: ${anu.nascimento}
+📌 BY: SWAG BOT `
 			        reply(base1)
 			        break
 			    case 'base2':
                     if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base2.php?cpf=${body.slice(10)}`)
-			        base2 = `🔎 SWAG CONSULTAS / BASE 2 🔎
+			        base2 = `🔎 SWAG CONSULTAS / BASE 1 🔎
 
-➳ *NOME* :  ${anu.nome}
-➳ *SEXO*  : ${anu.sexo}
-➳ *NASCIMENTO* : ${anu.nascimento}
-📌 *BY: SWAG BOT* `
+➳ NOME: ${anu.nome}
+➳ SEXO: ${anu.sexo}
+➳ NASCIMENTO: ${anu.nascimento}
+📌 BY: SWAG BOT `
 			        reply(base2)
 			        break
 			    case 'base3':
                     if (args.length < 1) return reply('Cade O Cpf? ')
                     anu = await fetchJson(`http://70.37.60.112:8080/so/base3.php?cpf=${body.slice(10)}`)
-			        base3 = `🔎 SWAG CONSULTAS / BASE 3🔎
+			        base3 = `🔎 SWAG CONSULTAS / BASE 1 🔎
 
-➳ *NOME* :  ${anu.nome}
-➳ *SEXO*  : ${anu.sexo}
-➳ *NASCIMENTO* : ${anu.nascimento}
-📌 *BY: SWAG BOT* `
+➳ NOME: ${anu.nome}
+➳ SEXO: ${anu.sexo}
+➳ NASCIMENTO: ${anu.nascimento}
+📌 BY: SWAG BOT `
 			        reply(base3)
 			        break
                 case 'kbbi':
